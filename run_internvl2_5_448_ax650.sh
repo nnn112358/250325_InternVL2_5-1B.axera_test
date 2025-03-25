@@ -1,0 +1,15 @@
+./main_internvl2_5_448_prefill \
+--template_filename_axmodel "internvl2_5_1b_448_ax650/qwen2_p320_l%d_together.axmodel" \
+--axmodel_num 24 \
+--filename_vpm_resampler_axmodedl "internvl2_5_1b_448_ax650/vit_intern_2_5_sim_space2depth_nhwc.axmodel" \
+--tokenizer_type 2 \
+--bos 0 --eos 0 \
+--use_mmap_load_embed 1 \
+--filename_tokenizer_model "http://127.0.0.1:12345" \
+--filename_post_axmodel "internvl2_5_1b_448_ax650/qwen2_post.axmodel" \
+--filename_tokens_embed "internvl2_5_1b_448_ax650/model.embed_tokens.weight.bfloat16.bin" \
+--tokens_embed_num 151674 \
+--tokens_embed_size 896 \
+--live_print 1 \
+--continue 1 \
+--prompt "$1" --image "$2"
